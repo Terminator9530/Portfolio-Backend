@@ -32,6 +32,9 @@ connection.once('open',()=>{
 const skillsRouter = require('./routes/skills.router');
 app.use('/skills',skillsRouter);
 
+const languagesRouter = require('./routes/languages.router');
+app.use('/languages',languagesRouter);
+
 const loginRouter = require('./routes/login.router');
 app.use('/admin',loginRouter);
 

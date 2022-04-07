@@ -8,14 +8,14 @@ let loginModel = require('../models/login.model');
 
 function signJWT(id){
     return jwt.sign({id},process.env.JWT_SECRET,{
-        expiresIn : 60
+        expiresIn : 60 * 60
     });
 }
 
 function sendToken(user,status,req,res){
     const token = signJWT(user._id);
     res.cookie("jwt",token,{
-        expires : new Date(Date.now() + 60 * 1000),
+        expires : new Date(Date.now() + 60 * 60 * 1000),
         secure : true
     });
     res.send({status : status,token,user});

@@ -35,6 +35,9 @@ app.use('/skills',skillsRouter);
 const languagesRouter = require('./routes/languages.router');
 app.use('/languages',languagesRouter);
 
+const contactsRouter = require('./routes/contacts.router');
+app.use('/contacts',contactsRouter);
+
 const loginRouter = require('./routes/login.router');
 app.use('/admin',loginRouter);
 

@@ -38,6 +38,9 @@ app.use('/languages',languagesRouter);
 const contactsRouter = require('./routes/contacts.router');
 app.use('/contacts',contactsRouter);
 
+const profileRouter = require('./routes/profile.router');
+app.use('/profile',profileRouter);
+
 const loginRouter = require('./routes/login.router');
 app.use('/admin',loginRouter);
 

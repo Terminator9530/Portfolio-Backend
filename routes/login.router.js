@@ -15,6 +15,7 @@ function signJWT(id){
 function sendToken(user,status,req,res){
     const token = signJWT(user._id);
     res.cookie("jwt",token,{
+        domain : process.env.DOMAIN,
         expires : new Date(Date.now() + 60 * 60 * 1000),
         secure : true
     });

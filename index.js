@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 app.use(cors({
-    origin : [/localhost:3000$/,/peppy-lamington-626a1e.netlify.app$/],
+    origin : process.env.FRONTEND_URL,
     credentials : true
 }));
 app.use(express.json());

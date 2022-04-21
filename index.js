@@ -15,7 +15,7 @@ app.use(cors({
 app.use(express.json());
 dotenv.config();
 
-const port = process.env.port || 4000;
+const port = process.env.port;
 
 /* ----------------------------------------- Mongo DB Connection -------------------------------------------------- */
 
